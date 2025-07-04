@@ -40,7 +40,7 @@ pipeline{
                 url: 'http://100.25.132.67:8082/manager/text'
             )
         ], 
-        contextPath: '/onlinebookstore', 
+        contextPath: '/', 
         war: 'target/onlinebookstore-0.0.1-SNAPSHOT.war'  // adjust for Gradle if needed
     }
 }
