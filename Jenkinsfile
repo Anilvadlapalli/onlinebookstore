@@ -7,11 +7,11 @@ pipeline{
                 checkout scm
             }
         }
-        stage('build'){
-            steps{
-                sh 'mvn clean install'
-            }
-        }
+        stage('Build') {
+    steps {
+        sh 'mvn clean package'
+    }
+}
         stage('nexus'){
             steps{
                 nexusArtifactUploader artifacts: [
@@ -41,7 +41,7 @@ pipeline{
             )
         ], 
         contextPath: '/onlinebookstore', 
-        war: 'target/onlinebookstore-0.0.1-SNAPSHOT.war'
+        war: 'target/onlinebookstore-0.0.1-SNAPSHOT.war'  // adjust for Gradle if needed
     }
 }
     }
