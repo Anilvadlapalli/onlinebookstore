@@ -18,16 +18,16 @@ pipeline{
                     [
                         artifactId: 'onlinebookstore', 
                         classifier: '', 
-                        file: '/var/lib/jenkins/workspace/webapplication/target/onlinebookstore-0.0.1-SNAPSHOT.war', 
+                        file: '/var/lib/jenkins/workspace/pipeline/target/onlinebookstore-0.0.1-SNAPSHOT.war', 
                         type: 'war'
                         ]
                     ], 
-                        credentialsId: 'Nexus', 
+                        credentialsId: 'admin', 
                         groupId: 'onlinebookstore', 
-                        nexusUrl: '43.205.235.141:8081', 
+                        nexusUrl: '100.25.132.67:8081', 
                         nexusVersion: 'nexus3', 
                         protocol: 'http', 
-                        repository: 'onlinebookstores', 
+                        repository: 'maven-snapshots', 
                         version: '0.0.1-SNAPSHOT'
             }
         }
