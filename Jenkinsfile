@@ -40,8 +40,8 @@ pipeline{
                 url: 'http://100.25.132.67:8082/manager/text'
             )
         ], 
-        contextPath: '/myapp', 
-        war: 'target/your-app.war'
+        contextPath: '/onlinebookstore', 
+        war: 'target/onlinebookstore-0.0.1-SNAPSHOT.war'
     }
 }
     }
