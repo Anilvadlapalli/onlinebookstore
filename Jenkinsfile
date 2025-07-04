@@ -31,17 +31,18 @@ pipeline{
                         version: '0.0.1-SNAPSHOT'
             }
         }
-        stage('deploy'){
-            steps{
-                deploy adapters: [
-                    tomcat9(
-                        credentialsId: 'admin1', 
-                        path: '', 
-                        url: 'http://100.25.132.67:8082/')
-                        ], 
-                        contextPath: null, 
-                        war: '**/*.war'
-            }
-        }
+        stage('Deploy') {
+    steps {
+        deploy adapters: [
+            tomcat9(
+                credentialsId: 'admin1', 
+                path: '', 
+                url: 'http://100.25.132.67:8082/manager/text'
+            )
+        ], 
+        contextPath: '/myapp', 
+        war: 'target/your-app.war'
+    }
+}
     }
 }
