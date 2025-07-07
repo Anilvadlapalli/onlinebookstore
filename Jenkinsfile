@@ -24,7 +24,7 @@ pipeline{
                     ], 
                         credentialsId: 'admin', 
                         groupId: 'onlinebookstore', 
-                        nexusUrl: '100.25.132.67:8081', 
+                        nexusUrl: '35.153.79.177:8081', 
                         nexusVersion: 'nexus3', 
                         protocol: 'http', 
                         repository: 'maven-snapshots', 
@@ -37,7 +37,7 @@ pipeline{
             tomcat9(
                 credentialsId: 'admin1', 
                 path: '', 
-                url: 'http://100.25.132.67:8082/manager/text'
+                url: 'http://35.153.79.177:8082/manager/text'
             )
         ], 
         contextPath: '/anil', 
